@@ -46,6 +46,18 @@
          iabRef.addEventListener('loadstart', iabLoadStart);
          iabRef.addEventListener('loadstop', iabLoadStop);
          iabRef.addEventListener('exit', iabClose);
+         
+         
+        var name = window.localStorage.getItem("name");
+        if(name!=null)
+        {
+        
+        }
+        else
+        {
+        $("#principal").html("<div data-role=\"content\"><div id=\"padre\"><div id=\"hijo\"><img src=\"img/logo2.png\" width=\"242\" height=\"274\" alt=\"\"/><p>Thank you for purchasing CML | CAL, you are one step away from enjoying the app. <br><br>Enter e-mail and password to proceed with the activation.</p><form><label for=\"email\">Email:</label><input type=\"email\" name=\"correo\" id=\"correo\"><br><label for=\"password\">Password:</label><input type=\"password\" name=\"codigo\" id=\"codigo\"><br/><br/><button onclick=\"validar();return false;\">Send</button></form></div></div></div>");
+}
+         
     }
 
     </script>
@@ -276,17 +288,7 @@
     }
     </script>
     <script>
-    $( document ).ready(function() {
-        var name = window.localStorage.getItem("name");
-        if(name!=null)
-        {
-           
-        }
-        else
-        {
-            $("#principal").html("<div data-role=\"content\"><div id=\"padre\"><div id=\"hijo\"><img src=\"img/logo2.png\" width=\"242\" height=\"274\" alt=\"\"/><p>Thank you for purchasing CML | CAL, you are one step away from enjoying the app. <br><br>Enter e-mail and password to proceed with the activation.</p><form><label for=\"email\">Email:</label><input type=\"email\" name=\"correo\" id=\"correo\"><br><label for=\"password\">Password:</label><input type=\"password\" name=\"codigo\" id=\"codigo\"><br/><br/><button onclick=\"validar();return false;\">Send</button></form></div></div></div>");
-        }
-    });
+
     </script>
     <style type="text/css">
   
