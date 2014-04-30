@@ -249,16 +249,10 @@
         var name = window.localStorage.getItem("name");
         if(name!=null)
         {
-            //window.localStorage.setItem("name","Rohwin");
-            //alert("El usuario es: "+name);
-            //$("#principal").html("<div data-role=\"page\" id=\"home\"  data-theme=\"a\"><div data-role=\"header\">hola</div><div data-role=\"content\"><div data-role=\"fieldcontain\"><label>Correo:</label><input type=\"text\" name=\"correo\" id=\"correo\" value=\"\"/><label>Código:</label><input type=\"text\" name=\"codigo\" id=\"codigo\" value=\"\"/></div></div><div data-role=\"footer\" data-position=\"fixed\"></div></div>");
-            
-            
+            alert(name);
         }
         else
         {
-            //alert("Esta vacio: "+name);
-
             $("#principal").html("<div data-role=\"content\"><div id=\"padre\"><div id=\"hijo\"><img src=\"img/logo2.png\" width=\"242\" height=\"274\" alt=\"\"/><p>Thank you for purchasing CML | CAL, you are one step away from enjoying the app. <br><br>Enter e-mail and password to proceed with the activation.</p><form id=\"validador\"><label for=\"email\">Email:</label><input type=\"email\" name=\"correo\" id=\"correo\"><br><label for=\"password\">Password:</label><input type=\"password\" name=\"codigo\" id=\"codigo\"><br/><br/><button onclick=\"validar();return false;\">Send</button></form></div></div></div>");
         }
     });
@@ -271,8 +265,6 @@
         
         if(validateEmail(correo)==true)
         {
-            //alert("Correo: "+ correo + " codigo: "+ codigo);
-            
             $.ajax({
                 type:"GET",
                 url:"http://www.cdclaboratorio.com/Librerias/funciones.php?accion=validarCodigo&correo="+correo+"&codigo="+codigo,
@@ -293,8 +285,6 @@
                     }
                 }
             })
-            
-
         }
         else
         {
@@ -311,11 +301,6 @@
     	} else {
     		return true;
     	}
-    }
-    
-    function cerrar()
-    {
-        navigator.app.exitApp();
     }
     </script>
     
