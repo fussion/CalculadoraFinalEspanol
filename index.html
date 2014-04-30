@@ -38,17 +38,14 @@
     //
     function onDeviceReady() {
          //alert('Device is ready!');
-<<<<<<< HEAD
          //iabRef = window.open('http://apache.org', '_blank', 'location=yes');
          //iabRef.addEventListener('loadstart', iabLoadStart);
          //iabRef.addEventListener('loadstop', iabLoadStop);
          //iabRef.addEventListener('exit', iabClose);
-=======
          iabRef = window.open('http://apache.org', '_blank', 'location=yes');
          iabRef.addEventListener('loadstart', iabLoadStart);
          iabRef.addEventListener('loadstop', iabLoadStop);
          iabRef.addEventListener('exit', iabClose);
->>>>>>> 6c2855929d09ee5c9ab808ea5cf07013b1bc3711
     }
 
     </script>
@@ -231,32 +228,7 @@
     </style>
     
     <script>
-    $( document ).ready(function() {
-        
-        
-        var invocation = new XMLHttpRequest();
-        var url = 'http://www.cdclaboratorio.com/Librerias/funciones.php';
-           
-        function callOtherDomain() {
-          if(invocation) {    
-            invocation.open('GET', url, true);
-            invocation.onreadystatechange = handler;
-            invocation.send(); 
-          }
-        }
-        
-        
-        var name = window.localStorage.getItem("name");
-        if(name!=null)
-        {
-            //alert(name);
-        }
-        else
-        {
-            $("#principal").html("<div data-role=\"content\"><div id=\"padre\"><div id=\"hijo\"><img src=\"img/logo2.png\" width=\"242\" height=\"274\" alt=\"\"/><p>Thank you for purchasing CML | CAL, you are one step away from enjoying the app. <br><br>Enter e-mail and password to proceed with the activation.</p><form id=\"validador\"><label for=\"email\">Email:</label><input type=\"email\" name=\"correo\" id=\"correo\"><br><label for=\"password\">Password:</label><input type=\"password\" name=\"codigo\" id=\"codigo\"><br/><br/><button onclick=\"validar();return false;\">Send</button></form></div></div></div>");
-        }
-    });
-    
+   
     //Esta es la que se cambia
     function validar()
     {
@@ -948,18 +920,18 @@ TKIs have priority. In patients who progress to AP or BP during TKI therapy, the
         <h5 style="font-size:0.875em"><a href="#" onclick="window.open('http://www.ncbi.nlm.nih.gov/pubmed/19282833','_self','location=yes')"> http://www.ncbi.nlm.nih.gov</a></h5>
         
         <h3>SG O'Brien </h3>
-<<<<<<< HEAD
+
         <h5 style="font-size:0.875em"><a href="#" onclick="window.open('http://www.nejm.org/doi/full/10.1056/nejmoa022457','_self','localtion=yes')">http://www.nejm.org</a></h5>
         <h3>Baccarani</h3>
         <h5 style="font-size:0.875em"><a href="#" onclick="window.open('http://jco.ascopubs.org/content/27/35/6041.short','_self','location=yes')">http://jco.ascopubs.org</a></h5>
-=======
+
         <h5 style="font-size:0.875em"><a href="#" onclick="window.open('http://www.nejm.org/doi/full/10.1056/nejmoa022457','_system','localtion=yes')">http://www.nejm.org</a></h5>
         <h3>Baccarani</h3>
         <h5 style="font-size:0.875em"><a href="#" onclick="window.open('http://jco.ascopubs.org/content/27/35/6041.short','_blank','location=yes')">http://jco.ascopubs.org</a></h5>
         <h3>Prueba</h3>
         <h5 style="font-size:0.875em"><a href="#" onclick="window.open('http://cdclaboratorio.com','_system','location=yes')">http://jco.ascopubs.org</a></h5>
         <h5 style="font-size:0.875em"><a href="#" onclick="window.open('http://www.cdclaboratorio.com','_self','location=yes')">http://jco.ascopubs.org</a></h5>
->>>>>>> 6c2855929d09ee5c9ab808ea5cf07013b1bc3711
+
        
 </div>        
         
