@@ -67,11 +67,11 @@
         	var euro=0
         	var calcolosokal=0
         	panni=$("#Anni").val();
-        	pmilza=$("#Milza").val();
+        	pmilza=($("#Milza").val())*10;
         	ppiastrine=$("#Piastrine").val();
-        	pbasofili=$("#Basofili").val();
-        	peosinofili=$("#Eosinofili").val();
-        	pmieloblasti=$("#Mieloblasti").val();
+        	pbasofili=($("#Basofili").val())*10;
+        	peosinofili=($("#Eosinofili").val())*10;
+        	pmieloblasti=($("#Mieloblasti").val())*10;
     
     		a=0.0116*(panni-43.4);
     		b=0.0345*(pmilza/10-7.51);
@@ -226,7 +226,7 @@
         }
         else
         {
-            $("#principal").html("<div data-role=\"content\"><div id=\"padre\"><div id=\"hijo\"><img src=\"img/logo2.png\" width=\"242\" height=\"274\" alt=\"\"/><p>Thank you for purchasing CML | CAL, you are one step away from enjoying the app. <br><br>Enter e-mail and password to proceed with the activation.</p><form><label for=\"email\">Email:</label><input type=\"email\" name=\"correo\" id=\"correo\"><br><label for=\"password\">Password:</label><input type=\"password\" name=\"codigo\" id=\"codigo\"><br/><br/><button onclick=\"validar();return false;\">Send</button></form></div></div></div>");
+            $("#principal").html("<div data-role=\"content\"><div id=\"padre\"><div id=\"hijo\"><img src=\"img/logo2.png\" width=\"242\" height=\"274\" alt=\"\"/><p>Bienvenido a CML|CAL, está a un paso de disfrutar la aplicación. <br><br>Por favor ingrese correo y clave para proceder con la activación.</p><form><label for=\"email\">Correo:</label><input type=\"email\" name=\"correo\" id=\"correo\"><br><label for=\"password\">Clave:</label><input type=\"password\" name=\"codigo\" id=\"codigo\"><br/><br/><button onclick=\"validar();return false;\">Enviar</button></form>No tiene clave, solicitela <a href=\"#\" onlick=\"window.open('http://gatolocostudios.com','_self','location=yes')\">aquí</a></div></div></div>");
         }
     });
     
@@ -329,7 +329,7 @@
                     
                     <div data-role="collapsible">
                     <h4>Información</h4>
-                     <p style="text-align:justify">Esta aplicación realiza los cálculos de riesgo en 3 diferentes escalas, definiendo la posibilidad de logar los objetivos del tratamiento y contiene además algunos de los datos mas usados en la terapia de Leucemia Mieloide Crónica</p> </p>
+                     <p style="text-align:justify">Esta aplicación realiza los cálculos de riesgo en 3 diferentes escalas para Leucemia Mieloide Crónica (LMC), definiendo la posibilidad de lograr los objetivos del tratamiento de esta enfermedad, además contiene los datos mas relevantes en la terapia de LMC.</p> </p>
            </div>
                    
                     
@@ -386,34 +386,34 @@
         <form class="est_fuente">
            <ul data-role="listview" data-inset="true">
             <li class="ui-field-contain">
-                <label for="textinput-1">Age:</label>
-                <input type="number" name="Anni" id="Anni" placeholder="years" value="">
+                <label for="textinput-1">Edad:</label>
+                <input type="number" name="Anni" id="Anni" placeholder="Años" value="">
             </li>
             <li class="ui-field-contain">
-                <label for="textinput-1">Spleen:</label>
-                <input type="number" name="Milza" id="Milza" placeholder="max. distance from costal margin cm x 10 (e.g. 6 cm = 60)" value="">
+                <label for="textinput-1">Bazo:</label>
+                <input type="number" name="Milza" id="Milza" placeholder="Max. Distancia de la reja costal en cm" value="">
             </li>
             <li class="ui-field-contain">
-                <label for="textinput-1">Platelet:</label>
-                <input type="number" name="Piastrine" id="Piastrine" placeholder="Plt 109 L  ( e.g 350000 ml = 350 )" value="">
+                <label for="textinput-1">Plaquetas:</label>
+                <input type="number" name="Piastrine" id="Piastrine" placeholder="(ej. 350.000/ μL = 350)" value="">
             </li>
             <li class="ui-field-contain">
-                <label for="textinput-1">Blood Basophils:</label>
-                <input type="number" name="Basofili" id="Basofili" placeholder="% x 10 ( e.g. 1.5% = 15 )" value="">
+                <label for="textinput-1">Basófilos en sangre:</label>
+                <input type="number" name="Basofili" id="Basofili" placeholder="%" value="">
             </li>
             <li class="ui-field-contain">
-                <label for="textinput-1">Blood Eosinophils:</label>
-                <input type="number" name="Eosinofili" id="Eosinofili" placeholder="% x 10 ( e.g 2.6% = 26 )" value="">
+                <label for="textinput-1">Eosinófilos en sangre:</label>
+                <input type="number" name="Eosinofili" id="Eosinofili" placeholder="% " value="">
             </li>
             <li class="ui-field-contain">
-                <label for="textinput-1">Blood Myeloblasts:</label>
-                <input type="number" name="Mieloblasti" id="Mieloblasti" placeholder="% x 10 ( e.g 0.7% = 7 )" value="">
+                <label for="textinput-1">Mieloblastos en sangre:</label>
+                <input type="number" name="Mieloblasti" id="Mieloblasti" placeholder="% " value="">
             </li>
             <a data-role="button" data-theme="b" href="" onclick="cs();return false;">Calcular</a>
             <li class="ui-field-contain">
                 <label for="textinput-1">Sokal RR:</label>
                
-                    <textarea cols="40" rows="8" type="text" name="rissokal" id="rissokal" placeholder="Result Sokal" value="" readonly></textarea>
+                    <textarea cols="40" rows="8" type="text" name="rissokal" id="rissokal" placeholder="Resultado" value="" readonly></textarea>
                     <a class="pop2"  data-icon="arrow-d" style="text-align:center; display:block; margin-left:auto; margin-right:auto" data-role="button" data-theme="a"  href="#popupBasic" data-rel="popup">Información Sokal</a>
 
                 <div data-role="popup" id="popupBasic">
@@ -431,7 +431,7 @@
                     <!--
 <input type="text" name="riseuro" id="riseuro" placeholder="Result Hasford" value="" readonly>
 -->
-                    <textarea type="text" cols="40" rows="8" name="riseuro" id="riseuro" placeholder="Result Hasford" readonly></textarea>
+                    <textarea type="text" cols="40" rows="8" name="riseuro" id="riseuro" placeholder="Resultado" readonly></textarea>
                     <a class="pop2" data-icon="arrow-d"  style="text-align:center; display:block; margin-left:auto; margin-right:auto" data-role="button" data-theme="a" href="#popupBasic2" data-rel="popup">Información Hasford</a>
        
                 <div data-role="popup" id="popupBasic2">
@@ -478,7 +478,7 @@
     <div data-role="page" id="eutos" data-theme="a" >
         <!--         cabecera                 -->
         <div data-role="header">
-            <h1>Eutos Risk and Probability</h1>
+            <h1>Eutos Riesgo y Probabilidad</h1>
             <div class="inicio"><a href="#home" data-icon="home" ><img src="img/icons-svg/home-black.svg" width:"auto" height="40px" alt=""/></a></div>
         </div>
         <!--         contenido                 -->
@@ -494,17 +494,17 @@
          <form class="est_fuente"> 
          <ul data-role="listview" data-inset="true">
            <li class="ui-field-contain">
-            <label for="textinput-1">Spleen:</label>
-            <input type="number" min="0" max="60" required="required" name="Milza2" id="Milza2" placeholder="max. distance from costal margin cm" value="">
+            <label for="textinput-1">Bazo:</label>
+            <input type="number" min="0" max="60" required="required" name="Milza2" id="Milza2" placeholder="Max. Distancia desde reja costal en cm" value="">
            </li>
                                    
             <li class="ui-field-contain">
-                <label for="textinput-1">Blood Basophils:</label>
+                <label for="textinput-1">Basófilos en sangre:</label>
                 <input type="number" name="Basofili2" id="Basofili2" placeholder="%" value="">
             </li>
             <a data-role="button" data-theme="b" href="" onclick="cs2();return false;">Calcular</a>
             <li class="ui-field-contain">
-                <label for="textinput-1">EUTOS Risk group:</label>
+                <label for="textinput-1">Grupo de riesgo EUTOS:</label>
                 <textarea id="teutos" cols="40" rows="8" name="textarea" id="textarea"></textarea>
                 <!--
 <input type="text" name="teutos" id="teutos" placeholder="Result EUTOS Risk" value="" readonly >
@@ -521,12 +521,16 @@
                 </div>
             </li>
             <li class="ui-field-contain">
-                <label for="textinput-1">EUTOS Probability for no CCgr at 18 months:</label>
-                <textarea type="text" name="probeutos" id="probeutos" placeholder="Result EUTOS Probability" value="" readonly ></textarea>
+                <label for="textinput-1">Probabilidad de no lograr CCyR a los 18 meses con Imatinib:</label>
+                <br />
+                <br />
+                <textarea type="text" name="probeutos" id="probeutos" placeholder="Resultado" value="" readonly ></textarea>
             </li>
             <li class="ui-field-contain">
-                <label for="textinput-1">EUTOS Score:</label>
-                <textarea type="text" name="riseutos" id="riseutos" placeholder="Result EUTOS Score" value="" readonly ></textarea>
+                <label for="textinput-1">Puntaje EUTOS:</label>
+                <br />
+                <br />
+                <textarea type="text" name="riseutos" id="riseutos" placeholder="Resultado" value="" readonly ></textarea>
             </li>
             <a data-role="button" data-theme="b" href="" onclick="borrarDatos();return false;">Limpiar</a>
             
@@ -566,27 +570,39 @@
            <ul data-role="listview" data-inset="true">
             <li class="ui-field-contain">
                 <label for="textinput-1">Sokal RR:</label>
-                <textarea type="text" name="rissokal3" id="rissokal3" placeholder="Result Sokal" value="" readonly></textarea></textarea>
+                <br />
+                <br />
+                <textarea type="text" name="rissokal3" id="rissokal3" placeholder="Resultado" value="" readonly></textarea></textarea>
             </li>
             <li class="ui-field-contain">
                 <label for="textinput-1">Hasford RR:</label>
-                <textarea type="text" name="riseuro3" id="riseuro3" placeholder="Result Hasford" value="" readonly></textarea>
+                <br />
+                <br />
+                <textarea type="text" name="riseuro3" id="riseuro3" placeholder="Resultado" value="" readonly></textarea>
             </li>
             <li class="ui-field-contain">
-                <label for="textinput-1">EUTOS Risk group:</label>
-                <textarea type="text" name="teutos3" id="teutos3" placeholder="Result EUTOS Risk" value="" readonly></textarea>
+                <label for="textinput-1">Grupo de riesgo EUTOS:</label>
+                <br />
+                <br />
+                <textarea type="text" name="teutos3" id="teutos3" placeholder="Resultado" value="" readonly></textarea>
             </li>
             <li class="ui-field-contain">
-                <label for="textinput-1">EUTOS Probability for no CCgr at 18 months:</label>
-                <textarea type="text" name="probeutos3" id="probeutos3" placeholder="Result EUTOS Probability" value="" readonly></textarea>
+                <label for="textinput-1">Probabilidad de no lograr CCyR a los 18 meses con Imatinib:</label>
+                <br />
+                <br />
+                <textarea type="text" name="probeutos3" id="probeutos3" placeholder="Resultado" value="" readonly></textarea>
             </li>
             <li class="ui-field-contain">
-                <label for="textinput-1">EUTOS Score:</label>
-                <textarea type="text" name="riseutos3" id="riseutos3" placeholder="Result EUTOS Score" value="" readonly></textarea>
+                <label for="textinput-1">Puntaje EUTOS:</label>
+                <br />
+                <br />
+                <textarea type="text" name="riseutos3" id="riseutos3" placeholder="Resultado" value="" readonly></textarea>
             </li>
             <li class="ui-field-contain">
                 <label for="textinput-1">Enviar a:</label>
-                <input type="text" name="correo" id="correo" placeholder="Ingrese el Email" value="">
+                <br />
+                <br />
+                <input type="text" name="correo" id="correo" placeholder="Ingrese el Correo" value="">
             </li>
             <div id="resultadoGenerarDatos">
             </div>
