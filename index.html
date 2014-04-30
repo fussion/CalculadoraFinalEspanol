@@ -362,6 +362,106 @@
         text-align: center;
         } 
     </style>
+    
+    <script>
+    $( document ).ready(function() {
+        var name = window.localStorage.getItem("name");
+        if(name!=null)
+        {
+           
+        }
+        else
+        {
+            $("#principal").html("<div data-role=\"content\"><div id=\"padre\"><div id=\"hijo\"><img src=\"img/logo2.png\" width=\"242\" height=\"274\" alt=\"\"/><p>Thank you for purchasing CML | CAL, you are one step away from enjoying the app. <br><br>Enter e-mail and password to proceed with the activation.</p><form><label for=\"email\">Email:</label><input type=\"email\" name=\"correo\" id=\"correo\"><br><label for=\"password\">Password:</label><input type=\"password\" name=\"codigo\" id=\"codigo\"><br/><br/><button onclick=\"validar();return false;\">Send</button></form></div></div></div>");
+        }
+    });
+    
+    function validar()
+    {
+        var correo =  $("#correo").val();
+        var codigo =  $("#codigo").val();
+        
+        if(validateEmail(correo)==true)
+        {
+            $.ajax({
+                type:"GET",
+                url:"http://www.cdclaboratorio.com/Librerias/funciones.php?accion=validarCodigo&correo="+correo+"&codigo="+codigo,
+                dataType:"text",
+                contentType: "application/json;charset=utf-8",
+                async:true,
+                data:$(this).serialize(),
+                success:function(response){
+                    if(response=="1")
+                    {
+                        window.localStorage.setItem("name","activado");                        
+                        alert("Please, reboot your app");
+                    }
+                    else
+                    {
+                        alert("Error Code");
+                    }
+                }
+            })
+        }
+        else
+        {
+            alert("Digite un correo válido");
+        }
+    }
+    
+    function validateEmail($email) 
+    {
+    	var emailReg = /^([\da-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+    	
+        if( !emailReg.test( $email ) ) {
+    		return false;
+    	} else {
+    		return true;
+    	}
+    }
+    </script>
+    <style type="text/css">
+        body {
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        /*background-color: #FFDEAD;*/
+        text-align: center
+        } 
+        
+        form, p{
+            width: 400px;
+           font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        	text-align: -moz-center;
+        	font-size:16px;
+            text-shadow: none;
+            color: white;
+        }
+        
+        p {
+        	text-align:center;
+
+        	}
+        
+        
+        form label {
+            display: inline-block;
+            width: 150px;
+        	padding: 5px;
+        }
+        
+        form input {
+            display: inline-block;
+            width: 200px;
+           
+        }
+        
+        #padre {
+        /*background-color: red;*/
+        width: 400px;
+        height:auto;
+        margin: 4px auto ;
+        } 
+    </style>
 </head>
 
 <body>
