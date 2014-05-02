@@ -42,6 +42,9 @@
          //iabRef.addEventListener('loadstart', iabLoadStart);
          //iabRef.addEventListener('loadstop', iabLoadStop);
          //iabRef.addEventListener('exit', iabClose);
+         
+         if (parseFloat(device.version) >= 7.0) { document.body.style.marginTop = "20px"; }
+         
          var name = window.localStorage.getItem("name");
         if(name!=null)
         {
