@@ -1474,7 +1474,7 @@ div.ui-mobile-viewport {
 	padding: .7em 0;
 	text-overflow: ellipsis;
 	overflow: hidden;
-	white-space: nowrap;
+	/*white-space: nowrap;*/
 	outline: 0 !important;
 }
 .ui-footer .ui-title {

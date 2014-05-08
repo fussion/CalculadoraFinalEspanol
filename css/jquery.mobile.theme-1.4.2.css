@@ -626,7 +626,7 @@ margin-right: auto;
 	position: absolute;
 margin: 0px;
 padding: 0px;
-right: 79px;
+right: 15%;
 top: 4px;
 background-color: rgb(117, 112, 112);
 width: 51px;
@@ -634,4 +634,18 @@ height: 50px;
 border-radius: 0px 0px 15px 15px;
 text-align: center;
 	}
+	
 
+
+h4 {font-size: .8em!important;}
+
+@media only screen 
+and (max-width : 320px) {
+table, p, td, label, h3, h5 {
+	font-size:.9em !important};
+	}
+	
+}
+
+ 
+ 
