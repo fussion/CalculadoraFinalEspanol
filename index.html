@@ -3,7 +3,7 @@
 	<meta name="author" content="GatoLoco Studios S.A.S" />
  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1,
         width=device-width, height=device-height" />
-	<title>Sin título 1</title>
+	<title>CML CAL</title>
     
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.2.css"/>
    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.4.2.css"/>-
@@ -148,9 +148,9 @@
     		else if (calcolosokal >= 0.8 && calcolosokal <= 1.2){$("#rissokal3").val(calcolosokal+" INTERMEDIO • 68%(CCyR 12 m.)  •  81.3%(EFS 6 y)  •  87%(OS 6 y)");$("#rissokal").val(calcolosokal+" INTERMEDIO •  68%(CCyR 12 m.)  •  81.3%(EFS 6 y)  •  87%(OS 6 y)");}
     		else if (calcolosokal > 1.2){$("#rissokal").val(calcolosokal+" ALTO 51%(CCyR 12 m.)  •  67.3%(EFS 6 y)  •  76%(OS 6 y)");$("#rissokal3").val(calcolosokal+" ALTO 51%(CCyR 12 m.) • 67.3%(EFS 6 y) • 76%(OS 6 y)");}
             
-    		if (euro < 781){$("#riseuro").val(euro+" BAJO • 86%(CCyR 18 m.)");$("#riseuro3").val(euro+" LOW • 86%(CCyR 18 m.)");}
-    		else if (euro >= 781 && euro <= 1480){$("#riseuro").val(euro+" INTERMEDIATE • 86%(CCyR 18 m.)");$("#riseuro3").val(euro+" INTERMEDIATE •  86%(CCyR 18 m.)");}
-    		else if (euro >= 1480){$("#riseuro").val(euro+" HIGH • 65.8%(CCyR 18 m.)");$("#riseuro3").val(euro+" HIGH • 65.8%(CCyR 18 m.)");}
+    		if (euro < 781){$("#riseuro").val(euro+" BAJO • 86%(CCyR 18 m.)");$("#riseuro3").val(euro+" BAJO • 86%(CCyR 18 m.)");}
+    		else if (euro >= 781 && euro <= 1480){$("#riseuro").val(euro+" INTERMEDIO • 86%(CCyR 18 m.)");$("#riseuro3").val(euro+" INTERMEDIO •  86%(CCyR 18 m.)");}
+    		else if (euro >= 1480){$("#riseuro").val(euro+" ALTO • 65.8%(CCyR 18 m.)");$("#riseuro3").val(euro+" ALTO • 65.8%(CCyR 18 m.)");}
     	}
     </script>
     <script>
@@ -188,8 +188,8 @@
             $("#riseutos3").val(eutossc);
             
            
-            if (eutossc > 87) {$("#teutos").val("HIGH");$("#teutos3").val("HIGH");}
-            else if (eutossc <= 87) {$("#teutos").val("LOW");$("#teutos3").val("LOW 86%(CcyR 18 m.)");}
+            if (eutossc > 87) {$("#teutos").val("ALTO");$("#teutos3").val("ALTO");}
+            else if (eutossc <= 87) {$("#teutos").val("BAJO");$("#teutos3").val("BAJO 86%(CcyR 18 m.)");}
         }
     </script>
     <script>
