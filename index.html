@@ -144,14 +144,16 @@
     		euro=(a+b+c+d+e+f)*1000;
     		euro=Math.floor(euro*100)/100
 
-    		if (calcolosokal < 0.8){$("#rissokal3").val(calcolosokal+" BAJO • 78%(CCyR 12 m.)  •  90.8%(EFS 6 y)  •  94%(OS 6 y)");$("#rissokal").val(calcolosokal+" BAJO • 78%(CCyR 12 m.)  •  90.8%(EFS 6 y)  •  94%(OS 6 y)");}
-    		else if (calcolosokal >= 0.8 && calcolosokal <= 1.2){$("#rissokal3").val(calcolosokal+" INTERMEDIO • 68%(CCyR 12 m.)  •  81.3%(EFS 6 y)  •  87%(OS 6 y)");$("#rissokal").val(calcolosokal+" INTERMEDIO •  68%(CCyR 12 m.)  •  81.3%(EFS 6 y)  •  87%(OS 6 y)");}
-    		else if (calcolosokal > 1.2){$("#rissokal").val(calcolosokal+" ALTO 51%(CCyR 12 m.)  •  67.3%(EFS 6 y)  •  76%(OS 6 y)");$("#rissokal3").val(calcolosokal+" ALTO 51%(CCyR 12 m.) • 67.3%(EFS 6 y) • 76%(OS 6 y)");}
+    		if (calcolosokal < 0.8){$("#rissokal3").val(calcolosokal+" BAJO • \n78%(CCyR 12 m.)  •\n90.8% (EFS 6 y)  •\n94% (OS 6 y)");$("#rissokal").val(calcolosokal+" BAJO •\n78% (CCyR 12 m.)  •\n90.8% (EFS 6 y)  •\n94% (OS 6 y)");}
+    		else if (calcolosokal >= 0.8 && calcolosokal <= 1.2){$("#rissokal3").val(calcolosokal+" INTERMEDIO \n68% (CCyR 12 m.)  •\n81.3% (EFS 6 y)  •\n87% (OS 6 y)");$("#rissokal").val(calcolosokal+" INTERMEDIO •\n68% (CCyR 12 m.)  •\n81.3% (EFS 6 y)  •\n87% (OS 6 y)");}
+    		else if (calcolosokal > 1.2){$("#rissokal").val(calcolosokal+" ALTO \n51% (CCyR 12 m.) \n67.3% (EFS 6 y) \n76% (OS 6 y)");$("#rissokal3").val(calcolosokal+" ALTO \n51% (CCyR 12 m.)\n67.3% (EFS 6 y)\n76% (OS 6 y)");}
             
     		if (euro < 781){$("#riseuro").val(euro+" BAJO • 86%(CCyR 18 m.)");$("#riseuro3").val(euro+" BAJO • 86%(CCyR 18 m.)");}
     		else if (euro >= 781 && euro <= 1480){$("#riseuro").val(euro+" INTERMEDIO • 86%(CCyR 18 m.)");$("#riseuro3").val(euro+" INTERMEDIO •  86%(CCyR 18 m.)");}
     		else if (euro >= 1480){$("#riseuro").val(euro+" ALTO • 65.8%(CCyR 18 m.)");$("#riseuro3").val(euro+" ALTO • 65.8%(CCyR 18 m.)");}
-    	}
+    	
+
+		}
     </script>
     <script>
         function cs2(){
@@ -284,6 +286,8 @@ and (orientation : portrait){
     
     <script>
     $( document ).ready(function() {
+
+		
          var name = window.localStorage.getItem("name");
         if(name!=null)
         {
@@ -469,7 +473,9 @@ and (orientation : portrait){
             <li class="ui-field-contain">
                 <label for="textinput-1">Sokal RR:</label>
                
-                    <textarea cols="40" rows="8" type="text" name="rissokal" id="rissokal" placeholder="Resultado" value="" readonly></textarea>
+                    <textarea style="height:auto" type="text" name="rissokal" id="rissokal" placeholder="Resultado" value="" readonly></textarea>
+                    
+                    
                     <a class="pop2"  data-icon="arrow-d" style="text-align:center; display:block; margin-left:auto; margin-right:auto" data-role="button" data-theme="a"  href="#popupBasic" data-rel="popup">Información Sokal</a>
 
                 <div data-role="popup" id="popupBasic">
