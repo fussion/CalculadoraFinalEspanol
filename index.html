@@ -1,9 +1,11 @@
 <!DOCTYPE HTML><head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="author" content="GatoLoco Studios S.A.S" />
- <!--a name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1,
+	<!--<meta name="author" content="GatoLoco Studios S.A.S" />
+ <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1,
         width=device-width, height=device-height" />-->
+        
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi" />
+        
 	<title>CML CAL</title>
     
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.2.css"/>
@@ -145,13 +147,13 @@
     		euro=(a+b+c+d+e+f)*1000;
     		euro=Math.floor(euro*100)/100
 
-    		if (calcolosokal < 0.8){$("#rissokal3").val(calcolosokal+" BAJO • \n78%(CCyR 12 m.)  •\n90.8% (EFS 6 y)  •\n94% (OS 6 y)");$("#rissokal").val(calcolosokal+" BAJO •\n78% (CCyR 12 m.)  •\n90.8% (EFS 6 y)  •\n94% (OS 6 y)");}
-    		else if (calcolosokal >= 0.8 && calcolosokal <= 1.2){$("#rissokal3").val(calcolosokal+" INTERMEDIO \n68% (CCyR 12 m.)  •\n81.3% (EFS 6 y)  •\n87% (OS 6 y)");$("#rissokal").val(calcolosokal+" INTERMEDIO •\n68% (CCyR 12 m.)  •\n81.3% (EFS 6 y)  •\n87% (OS 6 y)");}
-    		else if (calcolosokal > 1.2){$("#rissokal").val(calcolosokal+" ALTO \n51% (CCyR 12 m.) \n67.3% (EFS 6 y) \n76% (OS 6 y)");$("#rissokal3").val(calcolosokal+" ALTO \n51% (CCyR 12 m.)\n67.3% (EFS 6 y)\n76% (OS 6 y)");}
+    		if (calcolosokal < 0.8){$("#rissokal3").val(calcolosokal+" RIESGO BAJO  \n78%(CCyR 12 m.)  \n90.8% (EFS 6 y)  \n94% (OS 6 y)");$("#rissokal").val(calcolosokal+" RIESGO BAJO \n78% (CCyR 12 m.)  \n90.8% (EFS 6 y)  \n94% (OS 6 y)");}
+    		else if (calcolosokal >= 0.8 && calcolosokal <= 1.2){$("#rissokal3").val(calcolosokal+" RIESGO INTERMEDIO \n68% (CCyR 12 m.)  \n81.3% (EFS 6 y)  \n87% (OS 6 y)");$("#rissokal").val(calcolosokal+" RIESGO INTERMEDIO \n68% (CCyR 12 m.)  \n81.3% (EFS 6 y)  \n87% (OS 6 y)");}
+    		else if (calcolosokal > 1.2){$("#rissokal").val(calcolosokal+" RIESGO ALTO \n51% (CCyR 12 m.) \n67.3% (EFS 6 y) \n76% (OS 6 y)");$("#rissokal3").val(calcolosokal+" RIESGO ALTO \n51% (CCyR 12 m.)\n67.3% (EFS 6 y)\n76% (OS 6 y)");}
             
-    		if (euro < 781){$("#riseuro").val(euro+" BAJO • 86%(CCyR 18 m.)");$("#riseuro3").val(euro+" BAJO • 86%(CCyR 18 m.)");}
-    		else if (euro >= 781 && euro <= 1480){$("#riseuro").val(euro+" INTERMEDIO • 86%(CCyR 18 m.)");$("#riseuro3").val(euro+" INTERMEDIO •  86%(CCyR 18 m.)");}
-    		else if (euro >= 1480){$("#riseuro").val(euro+" ALTO • 65.8%(CCyR 18 m.)");$("#riseuro3").val(euro+" ALTO • 65.8%(CCyR 18 m.)");}
+    		if (euro < 781){$("#riseuro").val(euro+" RIESGO BAJO • 86%(CCyR 18 m.)");$("#riseuro3").val(euro+" RIESGO BAJO • 86%(CCyR 18 m.)");}
+    		else if (euro >= 781 && euro <= 1480){$("#riseuro").val(euro+" RIESGO INTERMEDIO • 86%(CCyR 18 m.)");$("#riseuro3").val(euro+" RIESGO INTERMEDIO •  86%(CCyR 18 m.)");}
+    		else if (euro >= 1480){$("#riseuro").val(euro+" RIESGO ALTO • 65.8%(CCyR 18 m.)");$("#riseuro3").val(euro+" RIESGO ALTO • 65.8%(CCyR 18 m.)");}
     	
 
 		}
@@ -191,8 +193,8 @@
             $("#riseutos3").val(eutossc);
             
            
-            if (eutossc > 87) {$("#teutos").val("ALTO");$("#teutos3").val("ALTO");}
-            else if (eutossc <= 87) {$("#teutos").val("BAJO");$("#teutos3").val("BAJO 86%(CcyR 18 m.)");}
+            if (eutossc > 87) {$("#teutos").val("RIESGO ALTO");$("#teutos3").val("RIESGO ALTO");}
+            else if (eutossc <= 87) {$("#teutos").val("RIESGO BAJO");$("#teutos3").val("RIESGO BAJO 86%(CcyR 18 m.)");}
         }
     </script>
     <script>
@@ -472,9 +474,9 @@ and (orientation : portrait){
             </li>
             <a data-role="button" data-theme="b" href="" onclick="cs();return false;">Calcular</a>
             <li class="ui-field-contain">
-                <label for="textinput-1">Sokal RR:</label>
+                <h1>Escala Sokal:</h1>
                
-                    <textarea style="height:auto" type="text" name="rissokal" id="rissokal" placeholder="Resultado" value="" readonly></textarea>
+                    <textarea class"hola" type="text" name="rissokal" id="rissokal" placeholder="Resultado" value="" readonly></textarea>
                     
                     
                     <a class="pop2"  data-icon="arrow-d" style="text-align:center; display:block; margin-left:auto; margin-right:auto" data-role="button" data-theme="a"  href="#popupBasic" data-rel="popup">Información Sokal</a>
@@ -489,7 +491,7 @@ and (orientation : portrait){
                 </div>
             </li>
             <li class="ui-field-contain">
-                <label for="textinput-1">Hasford RR:</label>
+                <h1>Escala Hasford:</h1>
 
                     <!--
 <input type="text" name="riseuro" id="riseuro" placeholder="Result Hasford" value="" readonly>
@@ -568,7 +570,7 @@ and (orientation : portrait){
             <a data-role="button" data-theme="b" href="" onclick="cs2();return false;">Calcular</a>
             <li class="ui-field-contain">
                 <label for="textinput-1">Grupo de riesgo EUTOS:</label>
-                <textarea id="teutos" cols="40" rows="8" name="textarea" id="textarea"></textarea>
+                <textarea id="teutos" cols="40" rows="8" name="textarea"></textarea>
                 <!--
 <input type="text" name="teutos" id="teutos" placeholder="Result EUTOS Risk" value="" readonly >
 -->
@@ -585,13 +587,13 @@ and (orientation : portrait){
             <li class="ui-field-contain">
                 <label for="textinput-1">Probabilidad de no lograr CCyR a los 18 meses con Imatinib:</label>
                 <br />
-                <br />
+                
                 <textarea type="text" name="probeutos" id="probeutos" placeholder="Resultado" value="" readonly ></textarea>
             </li>
             <li class="ui-field-contain">
                 <label for="textinput-1">Puntaje EUTOS:</label>
                 <br />
-                <br />
+                
                 <textarea type="text" name="riseutos" id="riseutos" placeholder="Resultado" value="" readonly ></textarea>
             </li>
             <a data-role="button" data-theme="b" href="" onclick="borrarDatos();return false;">Limpiar</a>
@@ -631,38 +633,38 @@ and (orientation : portrait){
          <form class="est_fuente">
            <ul data-role="listview" data-inset="true">
             <li class="ui-field-contain">
-                <label for="textinput-1">Sokal RR:</label>
-                <br />
+                <label for="textinput-1">Escala Sokal:</label>
+              
                 <br />
                 <textarea type="text" name="rissokal3" id="rissokal3" placeholder="Resultado" value="" readonly></textarea></textarea>
             </li>
             <li class="ui-field-contain">
-                <label for="textinput-1">Hasford RR:</label>
-                <br />
+                <label for="textinput-1">Escala Hasford:</label>
+              
                 <br />
                 <textarea type="text" name="riseuro3" id="riseuro3" placeholder="Resultado" value="" readonly></textarea>
             </li>
             <li class="ui-field-contain">
                 <label for="textinput-1">Grupo de riesgo EUTOS:</label>
-                <br />
+              
                 <br />
                 <textarea type="text" name="teutos3" id="teutos3" placeholder="Resultado" value="" readonly></textarea>
             </li>
             <li class="ui-field-contain">
                 <label for="textinput-1">Probabilidad de no lograr CCyR a los 18 meses con Imatinib:</label>
-                <br />
+               
                 <br />
                 <textarea type="text" name="probeutos3" id="probeutos3" placeholder="Resultado" value="" readonly></textarea>
             </li>
             <li class="ui-field-contain">
                 <label for="textinput-1">Puntaje EUTOS:</label>
-                <br />
+               
                 <br />
                 <textarea type="text" name="riseutos3" id="riseutos3" placeholder="Resultado" value="" readonly></textarea>
             </li>
             <li class="ui-field-contain">
                 <label for="textinput-1">Enviar a:</label>
-                <br />
+               
                 <br />
                 <input type="text" name="correo" id="correo" placeholder="Ingrese el Correo" value="">
             </li>
@@ -980,8 +982,14 @@ TKIs have priority. In patients who progress to AP or BP during TKI therapy, the
         <h3>Supervivencia Global IRIS: O`Brien SG. N Engl J Med 2003; 348:994</h3>
         <h5 style="font-size:0.875em"><a href="#" onclick="window.open('http://www.nejm.org/doi/full/10.1056/nejmoa022457','_self','localtion=yes')">http://www.nejm.org</a></h5>
         
-</div>        
-        
+</div>  
+
+	<div data-role="collapsible" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d".>
+                    <h4> Acerca de Nosotros</h4>       
+                   <p>Preguntas o inquietudes</p>      
+             
+             <p>Envíanos un e-mail a&nbsp;<a href="mailto:administrador@gatolocostudios.com">administrador@gatolocostudios.com</a></p>
+     </div>   
         
       </div>
         <!--         pie de pagina                 -->
